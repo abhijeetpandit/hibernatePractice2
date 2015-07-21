@@ -1,14 +1,23 @@
 package org.abhi.demo.datamodel;
 
 public class Movie {
-	private String id;
+	private Integer id;
 	private String title;
 	private String director;
 	private String synopsys;
-	public String getId() {
+	
+	
+	public Movie(Integer id, String title, String director, String synopsys) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.director = director;
+		this.synopsys = synopsys;
+	}
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getTitle() {

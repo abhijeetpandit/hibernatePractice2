@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class name="org.abhi.demo.datamodel.Movie" table="MOVIES">
+		<id name="id" column="MOVIES_ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="title" column="TITLE"></property>
+		<property name="director" column="DIRECTOR"></property>
+		<property name="synopsys" column="SYNOPSYS"></property>
+	</class>
+</hibernate-mapping>
