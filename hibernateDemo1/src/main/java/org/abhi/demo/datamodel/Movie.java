@@ -7,6 +7,9 @@ public class Movie {
 	private String synopsys;
 	
 	
+	public Movie() {
+		super();
+	}
 	public Movie(Integer id, String title, String director, String synopsys) {
 		super();
 		this.id = id;
