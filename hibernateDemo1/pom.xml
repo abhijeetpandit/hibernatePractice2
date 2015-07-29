@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.abhi</groupId>
-  <artifactId>hibernateDemo1</artifactId>
+  <artifactId>001-hibernateDemo1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
