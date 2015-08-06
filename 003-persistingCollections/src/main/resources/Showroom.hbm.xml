@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<class name="org.abhi.datamodel.Showroom" table="SHOWROOM_LIST" >
+ 		<id column="SHOWROOM_ID" name="id">
+ 			<generator class="native"/>
+ 		</id>
+ 		<property name="manager" column="MANAGER"/>
+ 		<list name="cars" cascade="all" table="CARS_LIST">
+ 			<key column="SHOWROOM_ID"/>
+ 			<index column="CAR_INDEX"/>
+ 			<one-to-many class="org.abhi.datamodel.Car"/>
+ 		</list>
+ 	</class>
+ 	<class name="org.abhi.datamodel.Car" table="CARS_LIST" >
+ 		<id column="CAR_ID" name="id">
+ 			<generator class="native"/>
+ 		</id>
+ 		<property column="NAME" name="name"/>
+ 		<property column="COLOR" name="color"/>
+ 	</class>
+ </hibernate-mapping>
