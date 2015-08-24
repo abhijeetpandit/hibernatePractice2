@@ -31,6 +31,7 @@ public class TestMain {
 			session.save(showroom);
 			transaction.commit();
 			session.close();
+			//test comment for commit
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
