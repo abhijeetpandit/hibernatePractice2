@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<class name="org.abhi.datamodel.ShowroomWithSet" table="SHOWROOM_LIST">
+ 		<id column="SHOWROOM_ID" name="id">
+ 			<generator class="native"/>
+ 		</id>
+ 		<property name="manager" column="MANAGER"/>
+ 		<set name="cars" cascade="all" table="CARS_TABLE">
+ 			<key column="SHOWROOM_ID"></key>
+ 			<one-to-many class="org.abhi.datamodel.Car"/>
+ 		</set>
+ 	</class>
+ 	<class name="org.abhi.datamodel.Car" table="CARS_TABLE">
+ 		<id name="id" column="CAR_ID">
+ 			<generator class="native"/>
+ 		</id>
+ 		<property name="name" column="NAME"></property>
+ 		<property name="color" column="COLOR"></property>
+ 	</class>
+ </hibernate-mapping>
