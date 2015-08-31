@@ -2,6 +2,16 @@
 <!DOCTYPE hibernate-mapping PUBLIC 
  "-//Hibernate/Hibernate Mapping DTD//EN"
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
- <hibernate-mapping>
- 
+ <hibernate-mapping package="org.abhi.datamodel">
+ 	<class name="Car">
+ 		<id name="id" column="CAR_ID">
+ 			<generator class="assigned"/>
+ 		</id>
+ 		<property name="name" column="NAME"/>
+ 		<property name="color" column="COLOR"/>
+ 		<one-to-one name="engine" class="Engine" cascade="all"/>
+ 	</class>
+ 	<class name="Engine" table="ENGINE">
+ 		<id ></id>
+ 	</class>
  </hibernate-mapping>
