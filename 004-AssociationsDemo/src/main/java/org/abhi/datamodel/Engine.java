@@ -1,7 +1,7 @@
 package org.abhi.datamodel;
 
 public class Engine {
-	private String id;
+	private Integer id;
 	private String make;
 	private String model;
 	private String size;
@@ -9,7 +9,7 @@ public class Engine {
 	public Engine() {
 		super();
 	}
-	public Engine(String id, String make, String model, String size, Car car) {
+	public Engine(Integer id, String make, String model, String size, Car car) {
 		super();
 		this.id = id;
 		this.make = make;
@@ -17,10 +17,10 @@ public class Engine {
 		this.size = size;
 		this.car = car;
 	}
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getMake() {

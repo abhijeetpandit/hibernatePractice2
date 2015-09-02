@@ -12,6 +12,12 @@
  		<one-to-one name="engine" class="Engine" cascade="all"/>
  	</class>
  	<class name="Engine" table="ENGINE">
- 		<id ></id>
+ 		<id name="id" column="CAR_ID">
+ 			<generator class="foreign">
+ 				<param name="property">car</param>
+ 			</generator>
+ 		</id>
+ 		<one-to-one name="car" class="Car" constrained="true"/>
+ 		<property name="size" column="SIZE"></property>
  	</class>
  </hibernate-mapping>
