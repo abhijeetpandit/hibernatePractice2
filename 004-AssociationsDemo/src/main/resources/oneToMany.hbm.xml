@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping package="org.abhi.datamodel">
+ 	<class name="Actor" table="ACTORS">
+ 		<id name="id" column="ACTOR_ID">
+ 			<generator class="native"/>
+ 		</id>
+ 		<property name="name" column="ACTOR_NAME"/>
+ 		
+ 		<many-to-one name="movie" column="MOVIE_ID" class="Movie"/>
+ 	</class>
+ 	<class name="Movie" table="MOVIES">
+ 		<id name="id" column="MOVIE_ID">
+ 			<generator class="native"/>
+ 		</id>
+ 		<property name="movieName" column="MOVIE_NAME"/>
+ 		<set name="actors" table="ACTORS" cascade="all">
+ 			<key column="MOVIE_ID"/>
+ 			<one-to-many class="Actor"/>
+ 		</set>
+ 	</class>
+ </hibernate-mapping>
